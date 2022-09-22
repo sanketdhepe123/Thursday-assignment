@@ -1,0 +1,125 @@
+// java program to find the factorail of number,Sum of two Digits,armstrong number,fibonacci series,number is prime or not.
+import java.util.*;
+
+class Question2 {
+    public static void main(String[] args) {
+        factorial_no();//calling the factorial function
+        sum_of_digit();//calling the sum of digit function
+        arms_no();//calling the armstrong number function
+        fibonacci_series();//calling the fibonacci series function
+        prime_or_not();//calling the prime or not function
+    }
+    //function to find the factorail of number
+    public static void factorial_no()
+    {
+        int n;
+        int i=1;
+        int fact=1;
+        System.out.println("Enter the number you want to find the factorai");
+        Scanner sc =new Scanner(System.in);
+        n=sc.nextInt();
+        //Finding out factorial using while loop
+         while( i <= n ){  
+            fact = fact * i;   
+            i++; //increment i by 1   
+        } 
+        //printing the result
+        System.out.println("\nFactorial of " + n + " is: " + fact);
+    }
+    
+    //function for finding the sum of two digits
+    public static void sum_of_digit()
+    {
+        int a,sum=0,digit;
+        System.out.println("\nEnter the number that you want to perform addition :");
+        Scanner sc= new Scanner (System.in);
+        a=sc.nextInt();
+       
+        //calculating the sum
+        while(a > 0)  
+        {  
+            //finds the last digit of the given number    
+            digit = a % 10;  
+            //adds last digit to the variable sum  
+            sum = sum + digit;  
+            //removes the last digit from the number  
+            a = a / 10;  
+        }
+        //printing the result
+        System.out.println("\nSum of enterd numbers is : "+sum);
+    }
+    
+    //function to find the armstrong number
+    public static void arms_no()
+    {
+        System.out.println("\nEnter the number you want to check whether entered number is armstrong or not");
+        Scanner sc =new Scanner(System.in);
+        int n;
+        n=sc.nextInt();
+        int check, rem, sum = 0;
+      
+        check = n;
+        while(check != 0) 
+        {
+         rem = check % 10;
+         sum = sum + (rem * rem * rem);
+         check = check / 10;
+        }
+        if(sum == n)
+         System.out.println("\nGiven number is an armstrong number.");
+        else
+         System.out.println("\nGiven number is not an armstrong number.");
+    }
+    
+    //function to find fibonacci series
+    public static void fibonacci_series()
+    {
+        System.out.println("\nEnter the number upto which you want to find the fibonacci series : ");
+        Scanner sc=new Scanner(System.in);
+        
+        int n;
+        n=sc.nextInt();
+        int a = 0, b = 1, c = 0;
+        //calculating the fibonacci series
+        System.out.println(a + " " + b + " ");
+        for (int i = 2; i < n; i++) 
+        {
+            c = a + b;
+            System.out.print(c + " ");
+            a = b;
+            b = c;
+        }
+        
+    }
+    
+    //function for check the number is prime or not
+    public static void prime_or_not()
+    {
+        System.out.println("\nEnter the number you want to find it is prime or not : ");
+        Scanner sc= new Scanner(System.in);
+        int n;
+        n=sc.nextInt();
+        int i, m = 0, flag = 0;
+      
+        m = n / 2;
+        //checking whether number is prime or not
+        if (n == 0 || n == 1)
+        {
+         System.out.println(n + " not a prime number");
+        } 
+        else
+        {
+         for (i = 2; i <= m; i++) {
+            if (n % i == 0) {
+               System.out.println(n + " not a prime number");
+               flag = 1;
+               break;
+            }
+         }
+         if (flag == 0) {
+            System.out.println(n + " is a prime number");
+         }
+      }
+    }
+    
+}
