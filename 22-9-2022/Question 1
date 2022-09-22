@@ -1,0 +1,25 @@
+//Java program to check whether the given number is palindrome or not
+import java.util.*;
+//Creating palindrome class
+class Palindrome {
+//Creating main method
+public static void main(String[] args)
+{
+System.out.println("Enter the number");//taking input from user
+Scanner sc =new Scanner(System.in);
+int n=sc.nextInt();
+int r,sum=0,temp;
+temp=n; 
+while(n>0)
+{
+r=n%10;
+sum (sum*10)+r; 
+n=n/10;
+}
+//Printing whether number is palindrome or not
+if(temp==sum) 
+System.out.println("Entered number is palindrome");
+else
+System.out.println("Entered number is not palindrome");
+}
+}
