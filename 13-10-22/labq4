@@ -1,0 +1,26 @@
+Q4)
+Write a program to accpet the positive numbers  from user and display the sum of that numbers using loop.
+
+//Creating the class add
+
+package labq2131022;
+import java.util.Scanner;
+public class add {
+
+	public static void main(String[] args) //Defining the main method.
+	 {
+		int n,sum=0;
+		System.out.println("How many numbers are u going to enter ");
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		System.out.println("Enter the "+n+" numbers");
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+			sum=sum+a[i]; 		//calculating the sum of numbers.
+		}
+		System.out.println("Sum of entered digits are "+sum); 	//printing the output of numbers.
+	}
+
+}
