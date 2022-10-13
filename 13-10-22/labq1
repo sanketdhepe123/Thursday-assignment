@@ -1,0 +1,46 @@
+Q1)Single:
+
+WAP to create a class which contain the method Palindrom .the second class will use the proerty of first class and display the output."
+
+
+//creating a palindrome class
+
+public class palindrome {
+	public void pal()		//Method to find the palindrome
+	{
+		int n;
+		System.out.println("Enter the number to check whether it is palindrome or not");
+		Scanner sc=new Scanner(System.in);	
+		n=sc.nextInt();	//accepting input from user
+		int temp,sum=0,r;
+		temp=n;
+		while(n>0)
+		{
+			r=n%10;
+			sum=(sum*10)+r;
+			n=n/10;
+		}
+		if(temp==sum)
+		{
+			System.out.println("entered number is palindrome.");
+		}
+		else
+		{
+			System.out.println("Entered number is not palindrome.");
+		}
+	}
+}
+
+//now we are going to create a class which is going to extend the palindrome class and call the method in palindrome 
+
+package lab131022;
+
+public class palex extends palindrome{
+
+	public static void main(String[] args) {
+		palex obj=new palex(); 	//creating the object
+		obj.pal();			//using object calling the method
+
+	}
+
+}
