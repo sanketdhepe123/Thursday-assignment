@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=PT+Sans:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.sidebar{
+  position: absolute;
+  background-color: pink;
+  width: 15vw;
+  height: 100vh;
+  font-family: 'Oswald', sans-serif;
+}
+.sidebar nav{
+    padding: 32px;
+}
+.sidebar nav li {
+  list-style: none;
+  font-size: 25px;
+  padding: 23.5px 0;
+  
+
+}
+.sidebar nav li a {
+  text-decoration: none;
+}
+.main{
+  /*background-color: yellow;*/
+  width: 85vw;
+  height: 100vh;
+  display: flex;
+}
+
+.container{
+  display: flex;
+  
+}
+.infoContainer{
+  /*background-color: aqua;*/
+  height: 60vh;
+  width: 150vh;
+  margin: 100px auto;
+ 
+  display: flex;
+  justify-content: space-around;
+}
+.devPic img{
+  
+  margin-left: 9em;
+  height: 65vh;
+  
+}
+.devInfo{
+  margin-right: -150px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.name{
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+}
+.about{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+}
+.buttons button{
+  background-color: rgb(95, 11, 169);
+  color: white;
+  border-radius: 12px;
+  padding: 5px 9px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.buttons button:hover{
+  background-color: white;
+  color: rgb(95, 11, 169);
+}
+.sidebarGo{
+  transform: translate(-443px, 0px);
+  position: absolute;
+}
+.hamburger {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 10px;
+}
+.cross{
+  margin-left: 150px;
+  margin-top: -25px;
+  
+}
+@media (max-width: 1015px){
+.devPic{
+  display: none;
+}
+
+
+}
