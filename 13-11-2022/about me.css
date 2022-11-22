@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Oswald:wght@500&family=PT+Sans:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar{
+  position: absolute;
+    background-color: pink;
+    width: 15vw;
+    height: 100vh;
+    font-family: 'Oswald', sans-serif;
+    transition: transform 0.3s ease-in;
+}
+.sidebarGo{
+    transform: translate(-443px, 0px);
+    position: absolute;
+}
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+.cross{
+    margin-left: 150px;
+    margin-top: -25px;
+}
+.sidebar nav{
+      padding: 32px;
+}
+.sidebar nav li{
+    list-style: none;
+    font-size: 25px;
+    padding: 23.5px 0;
+}
+  
+  
+  .container{
+    display: flex;
+    
+  }
+  .main{
+    /*background-color: rgba(39, 25, 25, 0.984);*/
+    width: 85vw;
+    height: 100vh;
+    
+    color:black;  
+  }
+.moreabout{
+    font-size: 25px;
+    font-family: 'Inconsolata', monospace;
+    font-weight:bolder;
+    margin-right: 10px;
+    margin-left: 80px;
+    
+  }
+  
+  
+  .infoContainer{
+    /*background-color: aqua;*/
+    height: 80vh;
+    width: 180vh;
+    margin: 110px auto;
+    display: flex;
+    
+  }
+  @media (max-width: 1015px){
+      
+    
+    }
+    
+  
