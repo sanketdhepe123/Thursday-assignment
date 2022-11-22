@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=PT+Sans:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.sidebar{
+  position: absolute;
+  background-color: pink;
+  width: 15vw;
+  height: 100vh;
+  font-family: 'Oswald', sans-serif;
+  transition: transform 0.3s ease-in;
+}
+.sidebar nav{
+    padding: 32px;
+}
+.sidebar nav li {
+  list-style: none;
+  font-size: 25px;
+  padding: 23.5px 0;
+  
+
+}
+.sidebar nav li a {
+  text-decoration: none;
+}
+.main{
+  /*background-color: yellow;*/
+  width: 85vw;
+  height: 100vh;
+}
+
+.container{
+  display: flex;
+  
+}
+.infoContainer{
+  /*background-color: aqua;*/
+  height: 60vh;
+  width: 150vh;
+  margin: 100px auto;
+ 
+  display: flex;
+  justify-content: space-around;
+}
+.devPic img{
+  
+  margin-left: 9em;
+  height: 65vh;
+  
+}
+.ContactInfo{
+  margin-right: -150px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.name{
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+}
+.mobile{
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+
+}
+@media (max-width: 1015px){
+  
+  
+  }
+  .sidebarGo{
+    transform: translate(-443px, 0px);
+    position: absolute;
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+  }
+  .cross{
+    margin-left: 150px;
+    margin-top: -25px;
+  }
+
+
