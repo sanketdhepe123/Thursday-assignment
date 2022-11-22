@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sanket Dhepe - PortFolio</title>
+  <link href="contactme.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="sidebar sidebarGo">
+      <nav>
+      <ul>
+        <a href="index.html" style="text-decoration: none";><li>Home</li></a>
+        <a href="About Me.html" style="text-decoration: none";><li>About Me</li></a>
+        
+        <a href="Contact Info.html" style="text-decoration: none";><li>Contact Info</li></a>
+        <a href="Contact Me.html" style="text-decoration: none";><li>Contact Me</li></a>
+      </ul>
+    </nav>
+    </div>
+    <div class="main">
+      <div class="hamburger">
+        <div class="ham"><img src="images/Ham.png" alt="" width= "23"></div>
+        <div class="cross"><img src="images/cross.png" alt="" width= "23"></div>
+      </div> 
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Get In touch</h3>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Mail" required>
+        <input type="text" id="Phone" placeholder="Your Phone" required>
+        <textarea id="message" rows="5" placeholder="How can i help you"></textarea>
+        <button type="submit">send</button>  
+      </form>
+      
+    </div>
+  </div>
+  <script src= 
+        "https://smtpjs.com/v3/smtp.js"> 
+      </script> 
+      
+      <script> 
+        function sendEmail() { 
+          Email.send({ 
+            Host: "smtp.gmail.com", 
+            Username: "sanketdhepe3@gmail.com", 
+            Password: "Shaheena@123", 
+            To: 'sanketdhepe4@gmail.com', 
+            From:   document.getElementById("email").value, 
+            Subject: "Sending Email using javascript", 
+            Body: "Well that was easy!!", 
+          }) .then(
+            message => alert(message));
+        } 
+      </script> 
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
