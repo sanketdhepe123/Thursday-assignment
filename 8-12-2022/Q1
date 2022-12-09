@@ -1,0 +1,164 @@
+package com.book;
+
+public class User_define extends Exception {
+    
+	public User_define(String msg)
+	{
+		super(msg); 
+	}
+
+}
+
+package com.book;
+import java.util.*;
+public class Book { 
+	Scanner sc=new Scanner(System.in);
+	String bookID;
+	static String Title;
+	static String author;
+	String category;
+	float price;
+	
+	Book() throws User_define //constructor
+	{ 
+
+		System.out.println("Enter Book id :");
+		bookID=sc.next();
+		if(bookID.startsWith("B") && bookID.length()<=4) //condition for Start id name and max Length
+		{		   }
+		else {
+			throw new User_define("InvalidBookException"); // user exception Throws
+		}		
+		System.out.println("enter the title of book ");
+		Title=sc.next();
+		System.out.println("enter the author name ");
+        author=sc.next();		
+		System.out.println("Enter Category of Book");
+		category=sc.next();
+	    if(category.matches("Science") || category.matches("Fiction") || category.matches("Technology") || category.matches("Other")) // condition for category
+	    { }
+	    else {
+	     throw new User_define("InvalidBookException");	 // user exception Throws
+	    }
+	    System.out.println("Enter Book Price :");
+	    price=sc.nextFloat();
+	    if(price>0) // Price is not negative 
+	    {}
+	    else {
+	    	throw new User_define("InvalidBookException"); // user exception Throws
+	    }
+	    
+	}
+	public void oldBook() //information of book 
+	{
+		System.out.println("The Book Id is :"+ bookID);
+		System.out.println("the title is :"+Title);
+		System.out.println("The Category of Book is : " +category);
+		System.out.println("The Price of book is : "+price);
+		System.out.println("the author name is :"+author);
+	}
+	
+}
+
+package com.book;
+
+public class Book_Store extends Book  {
+	public Book_Store() throws User_define {		
+	}
+    String w,Author,title;
+	public void addBook() throws User_define // new book information
+	{
+	do
+	{
+	System.out.println("do you want to add new book press y:");
+    w=sc.next();
+	System.out.println("Enter Book id :");
+	 bookiD=sc.next();
+	if(bookiD.startsWith("B") && bookiD.length()<=4) //condtion for book id name and length 
+	{		   }
+	else {
+		throw new User_define("InvalidBookException"); // user exception Throws
+	}		
+	System.out.println("enter the title of book ");
+	title=sc.next();
+	System.out.println("enter the author name ");
+    Author=sc.next();		
+	System.out.println("Enter Category of Book");
+    Category=sc.next();
+    if(Category.matches("Science") || Category.matches("Fiction") || Category.matches("Technology") || Category.matches("Other"))
+    {}
+    else {
+     throw new User_define("InvalidBookException"); // user exception Throws	 
+    }
+    System.out.println("Enter Book Price :");
+    Price=sc.nextFloat();
+    if(Price>0) // Price is not negative
+    {}
+    else {
+    	throw new User_define("InvalidBookException"); // user exception Throws
+    }
+	}
+	while(w=="y"); // condition to add more book
+	}
+	String bookiD,Category;
+	public void newBook() throws User_define //new book information
+	{
+		
+		System.out.println("The Book Id is :"+ bookiD);
+		System.out.println("the title is :"+title);
+		System.out.println("The Category of Book is : " +Category);
+		System.out.println("The Price of book is : "+Price);
+		System.out.println("the author name is :"+Author);
+	}
+	float Price;
+	public void searchByTitle() throws User_define
+	{
+		
+		 System.out.println("enter the title for search ");
+		 String tiTle=sc.next();
+		 if(tiTle.equals(Title)) // condition for search book by title 
+		 { 
+			 oldBook();
+		 }
+		 if(tiTle.equals(title)) // condition for search book by title
+		 { 
+			 newBook();
+		 }
+	}
+	public void searchByAuthor() throws User_define
+	{
+		 
+		 System.out.println("enter author name for search ");
+		 String auThor =sc.next();
+		 if(auThor.equals(Author)) // condition for search book by author
+		 {
+			 newBook();
+		 }
+		 if(auThor.equals(author)) // condition for search book by author
+		 {
+			 oldBook();
+		 }
+	}
+	public void displayAll() throws User_define
+	{
+		oldBook();
+		newBook();
+	}	
+}
+
+package com.bookutil;
+import com.book.Book_Store; // package import with Book_store class
+import com.book.User_define; // package import with User_define class
+public class Bookutil {
+	public static void main(String[] args) throws User_define {
+		Book_Store b=new Book_Store();
+		b.addBook();
+		
+		b.searchByTitle();
+		b.searchByAuthor();	
+		System.out.println("-----------------------------------------------------\n");
+		System.out.println("information about all books");
+		b.displayAll();
+		
+	}
+}
